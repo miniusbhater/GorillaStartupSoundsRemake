@@ -33,7 +33,7 @@ namespace GorillaStartupSoundsRemake
 
             if (File.Exists(sound))
             {
-                StartCoroutine(LoadAndPlaySound(sound));
+                StartCoroutine(Play(sound));
             }
             else
             {
@@ -41,7 +41,7 @@ namespace GorillaStartupSoundsRemake
             }
         }
 
-        private System.Collections.IEnumerator LoadAndPlaySound(string path)
+        private System.Collections.IEnumerator Play(string path)
         {
             using (WWW www = new WWW("file://" + path))
             {
